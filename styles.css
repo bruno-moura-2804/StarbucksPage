@@ -1,4 +1,3 @@
-/* Reset e Variáveis */
 :root {
   --verde-starbucks: #017143;
   --rosa-starbucks: #eb7495;
@@ -38,6 +37,7 @@ body {
 .logo {
   width: 80px;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .logo:hover {
@@ -99,18 +99,19 @@ body {
   background-color: rgba(1, 113, 67, 0.1);
 }
 
-/* Conteúdo Principal */
 .conteudo {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .texto-principal {
   width: 600px;
   animation: fadeIn 1s ease-in-out;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -161,6 +162,7 @@ p {
   width: 340px;
   transition: transform 0.5s;
   z-index: 2;
+  cursor: pointer;
 }
 
 .starbucks-img:hover {
@@ -172,6 +174,7 @@ p {
   justify-content: center;
   gap: 40px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .miniatura-item {
@@ -179,6 +182,7 @@ p {
   font-size: 14px;
   color: #333;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .miniatura-item img {
@@ -192,7 +196,6 @@ p {
   transform: translateY(-25px) scale(1.1);
 }
 
-/* Círculo de Fundo */
 .circulo {
   background: var(--verde-starbucks);
   width: 100%;
@@ -205,7 +208,6 @@ p {
   transition: background 0.5s ease-in-out;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -225,6 +227,7 @@ footer {
   width: 30px;
   opacity: 0.7;
   transition: opacity 0.3s;
+  cursor: pointer;
 }
 
 .redes-sociais img:hover {
@@ -234,9 +237,9 @@ footer {
 footer p {
   color: var(--cinza-escuro);
   font-size: 0.9rem;
+  user-select: none;
 }
 
-/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -248,7 +251,6 @@ footer p {
   }
 }
 
-/* Responsividade */
 @media (max-width: 1200px) {
   body {
     padding: 20px 50px;
@@ -278,39 +280,122 @@ footer p {
     padding: 20px;
   }
 
-  header {
+  .top-header {
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 70px;
   }
 
   .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-secondary {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+  }
+
+  .conteudo {
+    gap: 40px;
   }
 
   h1 {
-    font-size: 3rem;
-  }
-
-  .starbucks-img {
-    width: 280px;
-  }
-
-  .circulo {
-    clip-path: circle(300px at center bottom);
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   p {
     font-size: 1rem;
   }
 
-  .miniaturas img {
+  .imagem-principal {
+    justify-content: center;
+  }
+
+  .starbucks-img {
+    width: 260px;
+  }
+
+  .circulo {
+    clip-path: circle(320px at center top);
+  }
+
+  .miniaturas {
+    gap: 25px;
+  }
+
+  .miniatura-item {
+    font-size: 13px;
+  }
+
+  .miniatura-item img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .top-header {
+    padding: 15px 10px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .navbar ul {
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .miniatura-item img {
     width: 50px;
+  }
+
+  .miniatura-item {
+    font-size: 12px;
+  }
+
+  .starbucks-img {
+    width: 220px;
+  }
+
+  .circulo {
+    clip-path: circle(250px at center top);
   }
 }

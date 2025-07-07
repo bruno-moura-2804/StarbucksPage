@@ -2,6 +2,8 @@
 
 A visually appealing and responsive landing page inspired by Starbucks. This project focuses on clean layout, smooth transitions, and product showcase with interactive elements.
 
+![Preview](img/preview.png)
+
 ## 🔍 Features
 
 - ✅ Fully responsive design for mobile and desktop
